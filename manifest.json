@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Linkedin SSI Cracker",
+    "version": "1.0",
+    "description": "You should not have to post on LinkedIn to prove you are a good developer. This extension will modify the LinkedIn server response to get the SSI score you want without posting anything.",
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "helloyanis@linkedin-ssi-cracker"
+        }
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "webRequestFilterResponse",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*.linkedin.com/sales/ssi*"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.svg"
+    }
+}

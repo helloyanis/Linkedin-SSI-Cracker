@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn SSI Cracker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <script src="popup.js"></script>
+    <h3>LinkedIn SSI Cracker</h3>
+    <p>Edit these values, confirm then refresh the page to see the changes take effect.<br/>
+        ℹ️ Delete value to reset it to default.<br/>
+    ⚠️ Use values between 0 and 25!</p>
+    <form id="ssi-form">
+        <div class="field">
+            <label for="PROFESSIONAL_BRAND">PROFESSIONAL_BRAND</label>
+            <input type="number" min="0" max="25" id="PROFESSIONAL_BRAND" name="PROFESSIONAL_BRAND">
+        </div>
+        <div class="field">
+            <label for="FIND_RIGHT_PEOPLE">FIND_RIGHT_PEOPLE</label>
+            <input type="number" min="0" max="25" id="FIND_RIGHT_PEOPLE" name="FIND_RIGHT_PEOPLE">
+        </div>
+        <div class="field">
+            <label for="INSIGHT_ENGAGEMENT">INSIGHT_ENGAGEMENT</label>
+            <input type="number" min="0" max="25" id="INSIGHT_ENGAGEMENT" name="INSIGHT_ENGAGEMENT">
+        </div>
+        <div class="field">
+            <label for="STRONG_RELATIONSHIP">STRONG_RELATIONSHIP</label>
+            <input type="number" min="0" max="25" id="STRONG_RELATIONSHIP" name="STRONG_RELATIONSHIP">
+        </div>
+        <input type="submit" id="submit" value="Save">
+    </form>
+</body>
+</html>
