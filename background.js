@@ -24,12 +24,23 @@ browser.webRequest.onBeforeRequest.addListener(
           const userModifications = await browser.storage.local.get();
   
           // Applique vos modifications
-          jsonData.memberScore.subScores.forEach(subScore => {
-            if (userModifications[subScore.pillar]) {
-              subScore.score = parseFloat(userModifications[subScore.pillar]);
-            }
+          if(jsonData.memberScore) {
+            // Graph principal avec les sous-scores
+            jsonData.memberScore.subScores.forEach(subScore => {
+              if (userModifications[subScore.pillar]) {
+                subScore.score = parseFloat(userModifications[subScore.pillar]);
+              }
+            })
           }
-          )
+          if(jsonData.groupScore ) {
+            // Classement
+            jsonData.groupScore.forEach(group => {
+              if (userModifications[group.groupType]) {
+                group.rank = parseFloat(userModifications[group.groupType]);
+              }
+            })
+          }
+          
 
         console.log("jsonData", jsonData);
   
